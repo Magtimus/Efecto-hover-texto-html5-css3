@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #ebebeb;
+}
+
+.hover{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: all 300ms;
+}
+
+.hover:hover{
+    box-shadow: 0px 0px 30px -5px black; 
+}
+
+.hover img{
+    width: 500px;
+    height: 300px;
+    transition: all 300ms;
+}
+
+.hover:hover img{
+    transform: scale(1.6) rotate(10deg);
+}
+
+.hover h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    z-index: 2;
+    transition: all 600ms cubic-bezier(1,0,0,1);
+    border: 2px solid white;
+    background: black;
+    padding: 6px
+}
+
+.hover:hover h1{
+     transform: translate(-50%, -50%) scale(1);
+}
+
+.hover:before,
+.hover:after{
+    content: '';
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.6;
+    transition: all 600ms cubic-bezier(1,0,0,1);
+    border: 4px solid white;
+    z-index: 1;
+}
+
+.hover:before{
+    transform: rotate(45deg) translateY(-550px) translateX(0px);
+}
+
+.hover:after{
+    transform: rotate(45deg) translateY(550px) translateX(-60px);
+}
+
+.hover:hover:before{
+    transform: rotate(45deg) translateY(-240px) translateX(0px);
+}
+
+.hover:hover:after{
+    transform: rotate(45deg) translateY(180px) translateX(-80px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
